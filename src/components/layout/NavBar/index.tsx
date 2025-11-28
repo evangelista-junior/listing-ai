@@ -19,7 +19,7 @@ export function Navbar() {
             <div className="w-10 h-10 bg-linear-to-br from-primary to-auxiliar rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">L</span>
             </div>
-            <span className="ml-3 text-xl font-bold text-softBlack">
+            <span className="ml-3 text-xl font-bold text-black-soft">
               LaunchPad
             </span>
           </Link>
@@ -27,28 +27,28 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#about"
-              className="text-softBlack hover:text-primary transition-colors"
+              className="text-black-soft hover:text-primary transition-colors"
               aria-label="Product section"
             >
               About
             </a>
             <a
               href="#product"
-              className="text-softBlack hover:text-primary transition-colors"
+              className="text-black-soft hover:text-primary transition-colors"
               aria-label="Product section"
             >
               Product
             </a>
             <a
               href="#pricing"
-              className="text-softBlack hover:text-primary transition-colors"
+              className="text-black-soft hover:text-primary transition-colors"
               aria-label="Pricing section"
             >
               Pricing
             </a>
             <a
               href="#benefits"
-              className="text-softBlack hover:text-primary transition-colors"
+              className="text-black-soft hover:text-primary transition-colors"
               aria-label="Pricing section"
             >
               Benefits
@@ -58,7 +58,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/login"
-              className="text-softBlack hover:text-primary transition-colors px-4 py-2"
+              className="text-black-soft hover:text-primary transition-colors px-4 py-2"
               aria-label="Login to account"
             >
               Login
@@ -89,28 +89,28 @@ export function Navbar() {
             <div className="flex flex-col space-y-4">
               <a
                 href="#product"
-                className="text-softBlack hover:text-primary transition-colors py-2"
+                className="text-black-soft hover:text-primary transition-colors py-2"
                 aria-label="Product section"
               >
                 Product
               </a>
               <a
                 href="#pricing"
-                className="text-softBlack hover:text-primary transition-colors py-2"
+                className="text-black-soft hover:text-primary transition-colors py-2"
                 aria-label="Pricing section"
               >
                 Pricing
               </a>
               <a
                 href="#docs"
-                className="text-softBlack hover:text-primary transition-colors py-2"
+                className="text-black-soft hover:text-primary transition-colors py-2"
                 aria-label="Documentation"
               >
                 Docs
               </a>
               <div className="flex flex-col space-y-3 pt-4 border-t border-gray-200">
                 <button
-                  className="text-softBlack hover:text-primary transition-colors py-2 text-left"
+                  className="text-black-soft hover:text-primary transition-colors py-2 text-left"
                   aria-label="Login to account"
                 >
                   Login

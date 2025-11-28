@@ -11,10 +11,13 @@
   --color-foreground: var(--foreground);
 
   --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
   --color-auxiliar: #22d3ee;
+  --color-secondary: #10b981;
+  --color-secondary-dark: #059669;
 
-  --color-softBlack: #0f172a;
-  --color-softWhite: #f8fafc;
+  --color-black-soft: #0f172a;
+  --color-white-soft: #f8fafc;
 }
 
 @media (prefers-color-scheme: dark) {

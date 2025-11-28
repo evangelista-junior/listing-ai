@@ -12,14 +12,14 @@ export function Button({
   ...props
 }: Props) {
   const baseStyles =
-    "px-6 py-3 rounded-lg transition-all duration-200 font-medium focus:ring-2 focus:ring-offset-2";
+    "px-6 py-3 rounded-lg transition-all duration-200 focus:ring-2 focus:ring-offset-2 cursor-pointer inline-block text-center";
 
   const variants = {
-    primary: "bg-[#2563EB] text-white hover:bg-[#1d4ed8] focus:ring-[#2563EB]",
+    primary: "bg-primary text-white hover:bg-[#1d4ed8] focus:ring-primary",
     secondary:
-      "bg-[#10B981] text-white hover:bg-[#059669] focus:ring-[#10B981]",
+      "bg-secondary text-white hover:bg-secondary-dark focus:ring-secondary",
     outline:
-      "border-2 border-[#0F172A] text-[#0F172A] hover:bg-[#0F172A] hover:text-white focus:ring-[#0F172A]",
+      "border-2 border-black-soft text-black-soft hover:bg-black-soft hover:text-white focus:ring-black-soft",
   };
 
   return (
