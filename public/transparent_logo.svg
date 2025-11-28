@@ -6,7 +6,7 @@
       --color-auxiliar: #22d3ee;
       --color-secondary: #10b981;
       --color-secondary-dark: #059669;
-      --shadow-primary: 0 4px 12px rgba(37, 99, 235, 0.4);
+      --shadow-primary: 0 4px 12px rgba(37, 99, 235, 0.3);
       --shadow-secondary: 0 4px 12px rgba(16, 185, 129, 0.3);
     }
 

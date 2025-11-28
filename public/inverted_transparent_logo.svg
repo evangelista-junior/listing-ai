@@ -7,11 +7,12 @@
       --color-secondary: #10b981;
       --color-secondary-dark: #059669;
       --shadow-primary: 0 4px 12px rgba(37, 99, 235, 0.4);
+      --shadow-white: 0 4px 12px rgba(255, 255, 255, 0.3);
       --shadow-secondary: 0 4px 12px rgba(16, 185, 129, 0.3);
     }
 
     .emblem {
-      filter: drop-shadow(var(--shadow-primary));
+      filter: drop-shadow(var(--shadow-white));
     }
 
     .engine-accent {
