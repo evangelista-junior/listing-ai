@@ -68,7 +68,7 @@ export function Footer() {
 
         <div className="pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-3 md:mb-0">
-            © {new Date().getFullYear()} ListingAI. All rights reserved.
+            © {new Date().getFullYear()} Listing Engine. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <a

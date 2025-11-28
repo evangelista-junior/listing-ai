@@ -38,7 +38,7 @@ export function About() {
               />
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              We built ListingAI because we know how frustrating and
+              We built Listing Engine because we know how frustrating and
               time-consuming it is to create product listings that actually
               convert. As former e-commerce sellers ourselves, we spent
               countless hours writing descriptions, researching keywords, and
@@ -51,13 +51,12 @@ export function About() {
               and sell more.
             </p>
             <p className="text-lg text-gray-600">
-              Today, over 50,000 sellers trust ListingAI to handle their product
-              listing creation, freeing them up to focus on what really
+              Today, over 50,000 sellers trust Listing Engine to handle their
+              product listing creation, freeing them up to focus on what really
               matters—growing their business.
             </p>
           </div>
 
-          {/* Right Column - Stats */}
           <div className="space-y-6 animate-fade-in stagger-1">
             {stats.map((stat, index) => (
               <div

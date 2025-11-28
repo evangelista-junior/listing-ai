@@ -52,7 +52,7 @@ export function Benefits() {
           <h2 className="mb-4 animate-fade-in" id="benefits-heading">
             Why Choose{" "}
             <span className="bg-linear-to-r from-primary to-auxiliar bg-clip-text text-transparent">
-              ListingAI
+              Listing Engine
             </span>
             ?
           </h2>
