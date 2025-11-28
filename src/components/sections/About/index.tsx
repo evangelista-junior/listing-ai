@@ -59,16 +59,16 @@ export function About() {
             {stats.map((stat, index) => (
               <div
                 key={stat.label}
-                className={`bg-linear-to-br from-[#F8FAFC] to-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 animate-fade-in stagger-${
+                className={`bg-linear-to-br from-white-soft to-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 animate-fade-in stagger-${
                   index + 2
                 }`}
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-linear-to-br from-[#2563EB] to-[#22D3EE] rounded-lg flex items-center justify-center text-white fshrink-0">
+                  <div className="w-14 h-14 bg-linear-to-br from-primary to-auxiliar rounded-lg flex items-center justify-center text-white fshrink-0">
                     {stat.icon}
                   </div>
                   <div>
-                    <div className="text-4xl font-bold text-[#0F172A] mb-1">
+                    <div className="text-4xl font-bold text-black-soft mb-1">
                       {stat.value}
                     </div>
                     <div className="text-gray-600">{stat.label}</div>

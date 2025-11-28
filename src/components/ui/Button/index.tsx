@@ -15,7 +15,8 @@ export function Button({
     "px-6 py-3 rounded-lg transition-all duration-200 focus:ring-2 focus:ring-offset-2 cursor-pointer inline-block text-center";
 
   const variants = {
-    primary: "bg-primary text-white hover:bg-[#1d4ed8] focus:ring-primary",
+    primary:
+      "bg-primary text-white hover:bg-gradient-to-br hover:from-primary hover:to-auxiliar focus:ring-primary transition-colors duration-150",
     secondary:
       "bg-secondary text-white hover:bg-secondary-dark focus:ring-secondary",
     outline:
