@@ -17,10 +17,7 @@ export function Hero() {
             <span className="text-sm">Now in Public Beta</span>
           </div>
 
-          <h1
-            className="mb-6 max-w-3xl mx-auto animate-fade-in"
-            id="hero-heading"
-          >
+          <h1 className="mb-6 max-w-3xl mx-auto animate-fade-in">
             Launch Your Product{" "}
             <span className="bg-linear-to-r from-primary to-auxiliar bg-clip-text text-transparent">
               10x Faster
