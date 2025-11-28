@@ -1,6 +1,7 @@
 import { Clock, DollarSign, Target, BarChart3, Globe, Zap } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../../ui/Button";
+import { Card } from "../../ui/Card";
 
 export function Benefits() {
   const benefits = [
@@ -64,18 +65,12 @@ export function Benefits() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => (
-            <div
+            <Card
               key={benefit.title}
-              className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group animate-fade-in stagger-${
-                index + 2
-              }`}
-            >
-              <div className="w-14 h-14 bg-linear-to-br from-primary to-auxiliar rounded-lg flex items-center justify-center mb-5 text-white group-hover:scale-110 transition-transform duration-300">
-                {benefit.icon}
-              </div>
-              <h3 className="mb-3">{benefit.title}</h3>
-              <p className="text-gray-600">{benefit.description}</p>
-            </div>
+              icon={benefit.icon}
+              title={benefit.title}
+              description={benefit.description}
+            />
           ))}
         </div>
 
