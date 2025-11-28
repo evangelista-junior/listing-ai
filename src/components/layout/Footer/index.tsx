@@ -12,7 +12,7 @@ export function Footer() {
 
   return (
     <footer
-      className="bg-black-soft text-white-soft py-16 px-3 sm:px-6 lg:px-8"
+      className="bg-black-soft text-white-soft py-15 px-3 sm:px-6 lg:px-8"
       aria-label="Site footer"
     >
       <div className="max-w-7xl mx-auto">

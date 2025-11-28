@@ -45,12 +45,12 @@ export function Benefits() {
 
   return (
     <section
-      className="relative mx-auto py-20 px-4 sm:px-6 lg:px-8 bg-white"
+      className="relative mx-auto py-18px-3 sm:px-6 lg:px-6 bg-white"
       id="benefits"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="mb-4 animate-fade-in" id="benefits-heading">
+          <h2 className="mb-3 animate-fade-in" id="benefits-heading">
             Why Choose{" "}
             <span className="bg-linear-to-r from-primary to-auxiliar bg-clip-text text-transparent">
               Listing Engine
@@ -74,11 +74,11 @@ export function Benefits() {
           ))}
         </div>
 
-        <div className="mt-16 text-center bg-linear-to-br from-primary to-auxiliar rounded-2xl p-12 text-white animate-fade-in stagger-6">
+        <div className="mt-15 text-center bg-linear-to-br from-primary to-auxiliar rounded-2xl p-12 text-white animate-fade-in stagger-6">
           <h3 className="text-white mb-4">
             Stop Losing Sales to Dull Descriptions !
           </h3>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+          <p className="text-xl mb-6 text-white/90 max-w-2xl mx-auto">
             Start your 14-day free trial today. No credit card required. Cancel
             anytime.
           </p>

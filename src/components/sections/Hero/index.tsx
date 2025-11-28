@@ -29,7 +29,7 @@ export function Hero() {
             bullets, and SEO for Amazon, eBay, and Shopify in seconds.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-16 animate-fade-in stagger-3">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-15 animate-fade-in stagger-3">
             <Link href="/login">
               <Button variant="primary" aria-label="Start free trial">
                 Start Free Trial

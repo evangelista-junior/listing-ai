@@ -25,12 +25,12 @@ export function Features() {
 
   return (
     <section
-      className="relative mx-auto py-20 px-4 sm:px-6 lg:px-8 bg-white"
+      className="relative mx-auto py-18px-3 sm:px-6 lg:px-6 bg-white"
       id="features"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="mb-4 animate-fade-in" id="features-heading">
+          <h2 className="mb-3 animate-fade-in" id="features-heading">
             Powerful Features for Sellers
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto animate-fade-in stagger-1">
