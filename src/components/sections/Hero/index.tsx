@@ -1,7 +1,7 @@
 import { ArrowRight, Zap } from "lucide-react";
 import Link from "next/link";
-import dashboardImage from "../../../../public/dashboard.png";
-import { Button } from "../../ui/Button";
+import dashboardImage from "@/public/dashboard.png";
+import { Button } from "@/src/components/ui/Button";
 import Image from "next/image";
 
 export function Hero() {
