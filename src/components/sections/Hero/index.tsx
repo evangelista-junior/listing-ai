@@ -31,11 +31,7 @@ export function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-16 animate-fade-in stagger-3">
             <Link href="/login">
-              <Button
-                variant="primary"
-                className="flex items-center gap-2"
-                aria-label="Start free trial"
-              >
+              <Button variant="primary" aria-label="Start free trial">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" aria-hidden="true" />
               </Button>

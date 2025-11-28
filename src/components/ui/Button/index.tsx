@@ -12,7 +12,7 @@ export function Button({
   ...props
 }: Props) {
   const baseStyles =
-    "px-6 py-3 rounded-lg transition-all duration-200 focus:ring-2 focus:ring-offset-2 cursor-pointer inline-block text-center";
+    "flex justify-center items-center gap-1 px-6 py-3 rounded-lg transition-all duration-300 focus:ring-2 focus:ring-offset-2 cursor-pointer";
 
   const variants = {
     primary:
@@ -22,7 +22,7 @@ export function Button({
     outline:
       "border-2 border-black-soft text-black-soft hover:bg-black-soft hover:text-white focus:ring-black-soft",
     white:
-      "bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:shadow-xl",
+      "bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl",
   };
 
   return (
