@@ -15,7 +15,7 @@ export function Navbar() {
       className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center">
             <Image
@@ -59,7 +59,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="/login"
-              className="text-black-soft hover:text-primary transition-colors px-4 py-2"
+              className="text-black-soft hover:text-primary transition-colors px-3 py-2"
               aria-label="Login to account"
             >
               Login
@@ -86,7 +86,7 @@ export function Navbar() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-3 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
               <a
                 href="#product"
@@ -109,7 +109,7 @@ export function Navbar() {
               >
                 Docs
               </a>
-              <div className="flex flex-col space-y-3 pt-4 border-t border-gray-200">
+              <div className="flex flex-col space-y-3 pt-3 border-t border-gray-200">
                 <button
                   className="text-black-soft hover:text-primary transition-colors py-2 text-left"
                   aria-label="Login to account"

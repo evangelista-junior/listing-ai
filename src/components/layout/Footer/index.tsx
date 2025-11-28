@@ -12,11 +12,11 @@ export function Footer() {
 
   return (
     <footer
-      className="bg-black-soft text-white-soft py-16 px-4 sm:px-6 lg:px-8"
+      className="bg-black-soft text-white-soft py-16 px-3 sm:px-6 lg:px-8"
       aria-label="Site footer"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center mb-4">
               <Image
@@ -66,8 +66,8 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
+        <div className="pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm mb-3 md:mb-0">
             © {new Date().getFullYear()} ListingAI. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
