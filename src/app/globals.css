@@ -9,6 +9,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-primary: #2563eb;
+  --color-auxiliar: #22d3ee;
+
+  --color-softBlack: #0f172a;
 }
 
 @media (prefers-color-scheme: dark) {
