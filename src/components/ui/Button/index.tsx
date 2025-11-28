@@ -1,7 +1,7 @@
 import React from "react";
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "outline" | "white";
   children: React.ReactNode;
 }
 
@@ -21,6 +21,8 @@ export function Button({
       "bg-secondary text-white hover:bg-secondary-dark focus:ring-secondary",
     outline:
       "border-2 border-black-soft text-black-soft hover:bg-black-soft hover:text-white focus:ring-black-soft",
+    white:
+      "bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:shadow-xl",
   };
 
   return (
