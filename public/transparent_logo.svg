@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" width="500" height="120">
+  <style>
+    :root {
+      --color-primary: #2563eb;
+      --color-primary-dark: #1d4ed8;
+      --color-auxiliar: #22d3ee;
+      --color-secondary: #10b981;
+      --color-secondary-dark: #059669;
+      --shadow-primary: 0 4px 12px rgba(37, 99, 235, 0.4);
+      --shadow-secondary: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+
+    .emblem {
+      filter: drop-shadow(var(--shadow-primary));
+    }
+
+    .engine-accent {
+      filter: drop-shadow(var(--shadow-secondary));
+    }
+
+    .middle-line {
+      filter: drop-shadow(#fff);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .wordmark {
+        fill: #FFFFFF !important;
+      }
+    }
+  </style>
+
+  <!-- Emblem: square with list bars -->
+  <g class="emblem">
+    <rect x="10" y="20" width="80" height="80" fill="var(--color-primary)" />
+
+    <!-- list bars (white) -->
+    <rect class='middle-line' x="22" y="36" width="56" height="10" fill="#FFFFFF"/>
+    <rect class='middle-line' x="22" y="56" width="56" height="10" fill="#FFFFFF"/>
+    <rect class='middle-line' x="22" y="76" width="36" height="10" fill="#FFFFFF"/>
+
+    <!-- engine accent square (top-right) -->
+    <rect class="engine-accent" x="72" y="24" width="18" height="18" fill="var(--color-secondary)"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="110" y="78"
+        class="wordmark"
+        font-family="Inter, Arial, Helvetica, sans-serif"
+        font-size="34"
+        fill="#0B2545"
+        font-weight="600">
+    listingengine
+  </text>
+  <text x="319.7" y="78"
+        class="wordmark"
+        font-family="Inter, Arial, Helvetica, sans-serif"
+        font-size="34"
+        fill="var(--color-secondary)"
+        font-weight="600">
+    .
+  </text>
+  <text x="328.6" y="78"
+        class="wordmark"
+        font-family="Inter, Arial, Helvetica, sans-serif"
+        font-size="34"
+        fill="var(--color-primary)"
+        font-weight="600">
+    ai
+  </text>
+</svg>

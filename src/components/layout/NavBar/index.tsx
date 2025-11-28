@@ -2,8 +2,10 @@
 
 import { Button } from "../../ui/Button";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import transparentLogo from "@/public/transparent_logo.svg";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,12 +18,11 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center">
-            <div className="w-10 h-10 bg-linear-to-br from-primary to-auxiliar rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">L</span>
-            </div>
-            <span className="ml-3 text-xl font-bold text-black-soft">
-              LaunchPad
-            </span>
+            <Image
+              src={transparentLogo}
+              alt="Company logo."
+              className="max-w-[230px]"
+            />
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">

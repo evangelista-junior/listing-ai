@@ -1,5 +1,6 @@
-import React from "react";
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
+import transparentLogo from "@/public/inverted_transparent_logo.svg";
 
 export function Footer() {
   const footerLinks = {
@@ -18,10 +19,11 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-linear-to-br from-primary to-auxiliar rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">L</span>
-              </div>
-              <span className="ml-3 text-xl font-bold">ListingAI</span>
+              <Image
+                src={transparentLogo}
+                alt="Company logo."
+                className="max-w-[230px]"
+              />
             </div>
             <p className="text-gray-400 mb-6">
               AI-powered product listings for e-commerce sellers.
