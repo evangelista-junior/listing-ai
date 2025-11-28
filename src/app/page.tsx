@@ -1,6 +1,7 @@
 import { About } from "@/src/components/sections/About";
 import { Hero } from "@/src/components/sections/Hero";
-import { Product } from "../components/sections/Product";
+import { Product } from "@/src/components/sections/Product";
+import { Features } from "../components/sections/Features";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <Hero />
         <About />
         <Product />
+        <Features />
       </main>
     </div>
   );
