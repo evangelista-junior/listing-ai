@@ -35,7 +35,6 @@ export function Product() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {/* Old Way */}
           <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-gray-200 animate-fade-in stagger-2">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
