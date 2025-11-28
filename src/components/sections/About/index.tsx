@@ -22,7 +22,10 @@ export function About() {
   ];
 
   return (
-    <section className="py-18 px-3 sm:px-6 lg:px-6 bg-white" id="about">
+    <section
+      className="relative mx-auto py-18 px-3 sm:px-6 lg:px-6 bg-white"
+      id="about"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">

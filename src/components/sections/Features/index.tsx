@@ -24,7 +24,10 @@ export function Features() {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white" id="features">
+    <section
+      className="relative mx-auto py-20 px-4 sm:px-6 lg:px-8 bg-white"
+      id="features"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="mb-4 animate-fade-in" id="features-heading">
