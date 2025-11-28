@@ -1,10 +1,10 @@
-# 💻 listing-ai
+# 💻 listingengine.ai
 
 ## About the Project
 
-This repository hosts **Listing AI**, an AI-empowered tool designed to streamline the creation of high-quality, descriptive listings for **[INSERT SPECIFIC USE CASE: e.g., real estate, e-commerce products, job postings, etc.]**.
+This repository hosts **Listing Engine**, an AI-empowered tool designed to streamline the creation of high-quality, descriptive listings for **e-commerce products**.
 
-Built using the modern web stack, this application leverages the power of **Artificial Intelligence** to transform minimal input into comprehensive and engaging content. It aims to reduce manual effort and increase the efficiency of content creation for listings.
+Built using the modern web stack, this application leverages the power of **Artificial Intelligence** to transform minimal photo input into comprehensive and engaging content. It aims to reduce manual effort and increase the efficiency of content creation for listings.
 
 ## 🔗 Live Demo
 
@@ -18,9 +18,9 @@ The project is built on a robust and scalable foundation using the following mai
 - **React:** For building the user interface.
 - **Next.js (App Router):** The React framework for production, enabling server-side rendering and static site generation.
 - **TypeScript:** Ensuring type safety and better code maintainability.
-- **[AI Service/API, e.g., OpenAI, Gemini]:** Used for content generation and intelligence.
+- **[OpenAI]:** Used for content generation and intelligence.
 - **Vercel:** Used for deployment and hosting.
-- **CSS / Tailwind CSS (or similar):** For styling and responsiveness.
+- **Tailwind CSS:** For styling and responsiveness.
 
 ## 🚀 Getting Started
 
