@@ -38,22 +38,21 @@ export function About() {
               />
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              We built Listing Engine because we know how frustrating and
-              time-consuming it is to create product listings that actually
-              convert. As former e-commerce sellers ourselves, we spent
-              countless hours writing descriptions, researching keywords, and
-              optimizing for different platforms.
+              We built Listing Engine because creating product listings that
+              actually convert is time-consuming and often frustrating. As
+              former e‑commerce sellers, we spent many hours writing
+              descriptions, researching keywords, and adapting listings for
+              different platforms.
             </p>
             <p className="text-lg text-gray-600 mb-6">
-              Our AI-powered platform analyzes millions of successful listings
-              across Amazon, eBay, Shopify, and other major marketplaces to
-              generate perfectly optimized product descriptions that rank higher
-              and sell more.
+              Our AI‑assisted platform studies successful listings across
+              Amazon, eBay, Shopify and other marketplaces to generate optimized
+              product descriptions that save time and improve visibility.
             </p>
             <p className="text-lg text-gray-600">
-              Today, over 50,000 sellers trust Listing Engine to handle their
-              product listing creation, freeing them up to focus on what really
-              matters—growing their business.
+              We’re a new company and like to be realistic: we’ve already helped
+              dozens of sellers simplify their listing creation so they can
+              focus on what matters — growing their business.
             </p>
           </div>
 
