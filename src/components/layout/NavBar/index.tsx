@@ -6,9 +6,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import transparentLogo from "@/public/transparent_logo.svg";
+import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { label: "About", href: "about", aria: "About section" },
+  { label: "Product", href: "product", aria: "Product section" },
+  { label: "Pricing", href: "pricing", aria: "Pricing section" },
+  { label: "Benefits", href: "benefits", aria: "Benefits section" },
+];
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathName = usePathname();
 
   return (
     <nav
@@ -25,35 +34,16 @@ export function Navbar() {
             />
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#about"
-              className="text-black-soft hover:text-primary transition-colors"
-              aria-label="Product section"
-            >
-              About
-            </a>
-            <a
-              href="#product"
-              className="text-black-soft hover:text-primary transition-colors"
-              aria-label="Product section"
-            >
-              Product
-            </a>
-            <a
-              href="#pricing"
-              className="text-black-soft hover:text-primary transition-colors"
-              aria-label="Pricing section"
-            >
-              Pricing
-            </a>
-            <a
-              href="#benefits"
-              className="text-black-soft hover:text-primary transition-colors"
-              aria-label="Pricing section"
-            >
-              Benefits
-            </a>
+          <div className="hidden md:flex items-center space-x-4">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                aria-label={link.aria}
+                href={pathName == "/" ? `#${link.href}` : `/#${link.href}`}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
