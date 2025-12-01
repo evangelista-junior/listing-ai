@@ -30,7 +30,7 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-15 animate-fade-in stagger-3">
-            <Link href="/login">
+            <Link href="/auth/login">
               <Button variant="primary" aria-label="Start free trial">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" aria-hidden="true" />
