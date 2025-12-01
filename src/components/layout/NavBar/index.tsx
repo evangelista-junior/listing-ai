@@ -111,7 +111,7 @@ export function Navbar() {
               </a>
               <div className="flex flex-col space-y-3 pt-3 border-t border-gray-200">
                 <button
-                  className="text-black-soft hover:text-primary transition-colors py-2 text-left"
+                  className="text-black-soft hover:text-primary transition-colors py-1 text-left"
                   aria-label="Login to account"
                 >
                   Login

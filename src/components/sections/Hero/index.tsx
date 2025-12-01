@@ -9,7 +9,7 @@ export function Hero() {
     <section className="relative py-18 px-3 sm:px-3 lg:px-6 overflow-hidden">
       <div className="relative mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white px-3 py-2 rounded-full shadow-sm border border-gray-200 mb-6 animate-fade-in">
+          <div className="inline-flex items-center gap-2 bg-white px-3 py-1 rounded-full shadow-sm border border-gray-200 mb-6 animate-fade-in">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping-custom absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
