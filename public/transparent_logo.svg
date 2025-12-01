@@ -22,11 +22,11 @@
       filter: drop-shadow(#fff);
     }
 
-    @media (prefers-color-scheme: dark) {
+    <!-- @media (prefers-color-scheme: dark) {
       .wordmark {
         fill: #FFFFFF !important;
       }
-    }
+    } -->
   </style>
 
   <!-- Emblem: square with list bars -->
