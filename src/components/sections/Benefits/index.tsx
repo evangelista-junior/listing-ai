@@ -82,7 +82,7 @@ export function Benefits() {
             Start your 14-day free trial today. No credit card required. Cancel
             anytime.
           </p>
-          <Link href="/signup">
+          <Link href="/auth/signup">
             <Button variant="white">Get Started Free</Button>
           </Link>
         </div>

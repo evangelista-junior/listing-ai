@@ -64,7 +64,7 @@ export function Navbar() {
             >
               Login
             </Link>
-            <Link href="/signup">
+            <Link href="/auth/signup">
               <Button variant="primary" aria-label="Sign up for account">
                 Sign up
               </Button>
