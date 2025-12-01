@@ -45,7 +45,7 @@ export function Benefits() {
 
   return (
     <section
-      className="relative mx-auto py-18px-3 sm:px-6 lg:px-6 bg-white"
+      className="relative mx-auto py-18 px-3 sm:px-6 lg:px-6 bg-white"
       id="benefits"
     >
       <div className="max-w-7xl mx-auto">
