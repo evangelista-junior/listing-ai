@@ -3,6 +3,7 @@ import { Hero } from "@/src/components/sections/Hero";
 import { Product } from "@/src/components/sections/Product";
 import { Features } from "../components/sections/Features";
 import { Benefits } from "../components/sections/Benefits";
+import { Pricing } from "../components/sections/Pricing";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Product />
         <Features />
         <Benefits />
+        <Pricing />
       </main>
     </div>
   );
