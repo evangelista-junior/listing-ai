@@ -22,7 +22,7 @@ export function Footer() {
               <Image
                 src={transparentLogo}
                 alt="Company logo."
-                className="max-w-[230px]"
+                className="max-w-[170px]"
               />
             </div>
             <p className="text-gray-400 mb-6">

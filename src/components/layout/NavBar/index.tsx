@@ -21,7 +21,7 @@ export function Navbar() {
             <Image
               src={transparentLogo}
               alt="Company logo."
-              className="max-w-[230px]"
+              className="max-w-[180px]"
             />
           </Link>
 

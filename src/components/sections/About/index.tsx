@@ -34,7 +34,7 @@ export function About() {
               <Image
                 src={transparentLogo}
                 alt="Company logo."
-                className="max-w-[230px]"
+                className="max-w-[180px]"
               />
             </h2>
             <p className="text-lg text-gray-600 mb-6">
