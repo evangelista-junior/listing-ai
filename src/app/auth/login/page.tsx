@@ -6,8 +6,10 @@ import { Mail, Lock } from "lucide-react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import Image from "next/image";
 import transparentLogo from "@/public/transparent_logo.svg";
+import { Login } from "@/src/lib/server";
+import { useLoginStore } from "@/src/store/Auth/Login";
 
-interface FormInput {
+export interface LoginFormTypes {
   email: string;
   password: string;
   rememberMe: boolean;
@@ -18,11 +20,13 @@ export default function LoginPage() {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<FormInput>();
+  } = useForm<LoginFormTypes>();
+  const { login } = useLoginStore();
 
-  const onSubmit: SubmitHandler<FormInput> = (data) => {
-    console.log("Form submitted");
-    //     // Simular login/cadastro
+  const onSubmit: SubmitHandler<LoginFormTypes> = async (data) => {
+    login(); //TODO: Change it to the dash panel so it checks cookies/session
+    await Login(data);
+    return;
   };
 
   return (
@@ -87,7 +91,7 @@ export default function LoginPage() {
                 <input
                   type="checkbox"
                   className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
-                  {...register("rememberMe", { required: true })}
+                  {...register("rememberMe", { required: false })}
                 />
                 <span className="ml-2 text-sm text-gray-600">Remember me</span>
               </label>
@@ -111,7 +115,6 @@ export default function LoginPage() {
           </div>
         </div>
 
-        {/* Back to Home */}
         <div className="mt-6 text-center">
           <a
             href="/"
