@@ -37,7 +37,7 @@ export function PricingCard({
       )}
       <div className="mb-6">
         <h3 className="mb-1">{name}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
+        <p className="text-gray-600 mb-3">{description}</p>
         <div className="flex items-baseline">
           <span className="text-5xl font-bold text-black-soft">{price}</span>
           <span className="text-gray-600 ml-2">/{period}</span>

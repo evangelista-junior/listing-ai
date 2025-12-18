@@ -24,7 +24,7 @@ export function Product() {
       id="product"
     >
       <div>
-        <div className="text-center mb-16">
+        <div className="text-center mb-15">
           <h2 className="mb-3 animate-fade-in">
             The Smarter Way to Create Listings
           </h2>

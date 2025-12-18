@@ -4,6 +4,10 @@ import "./globals.css";
 import { Navbar } from "@/src/components/layout/NavBar";
 import { Footer } from "@/src/components/layout/Footer";
 
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
 const inter = Inter({
   subsets: ["latin"],
 });
@@ -40,11 +44,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>

@@ -49,7 +49,7 @@ export function Benefits() {
       id="benefits"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-15">
           <h2 className="mb-3 animate-fade-in" id="benefits-heading">
             Why Choose{" "}
             <span className="bg-linear-to-r from-primary to-auxiliar bg-clip-text text-transparent">
@@ -74,8 +74,8 @@ export function Benefits() {
           ))}
         </div>
 
-        <div className="mt-15 text-center bg-linear-to-br from-primary to-auxiliar rounded-2xl p-12 text-white animate-fade-in stagger-6">
-          <h3 className="text-white mb-4">
+        <div className="mt-15 text-center bg-linear-to-br from-primary to-auxiliar rounded-2xl p-9 text-white animate-fade-in stagger-6">
+          <h3 className="text-white mb-3">
             Stop Losing Sales to Dull Descriptions !
           </h3>
           <p className="text-xl mb-6 text-white/90 max-w-2xl mx-auto">

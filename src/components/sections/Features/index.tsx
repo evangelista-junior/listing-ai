@@ -28,8 +28,8 @@ export function Features() {
       className="relative mx-auto py-18px-3 sm:px-6 lg:px-6 bg-white"
       id="features"
     >
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+      <div className="max-w-7xl py-18 mx-auto">
+        <div className="text-center mb-15">
           <h2 className="mb-3 animate-fade-in" id="features-heading">
             Powerful Features for Sellers
           </h2>

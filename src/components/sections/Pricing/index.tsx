@@ -53,7 +53,7 @@ export function Pricing() {
       id="pricing"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-15">
           <h2 className="mb-3 animate-fade-in" id="pricing-heading">
             Simple, Transparent Pricing
           </h2>
@@ -74,7 +74,7 @@ export function Pricing() {
           ))}
         </div>
 
-        <p className="text-center text-gray-600 mt-12 animate-fade-in stagger-5">
+        <p className="text-center text-gray-600 mt-9 animate-fade-in stagger-5">
           All plans include 14-day free trial. Cancel anytime, no questions
           asked.
         </p>
