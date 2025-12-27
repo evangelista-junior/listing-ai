@@ -12,9 +12,9 @@ import { usePanelStore } from "@/src/store/Panel";
 
 const navLinks = [
   { label: "About", href: "about", aria: "About section" },
-  { label: "Product", href: "product", aria: "Product section" },
+  // { label: "Product", href: "product", aria: "Product section" },
   { label: "Features", href: "features", aria: "Product section" },
-  { label: "Benefits", href: "benefits", aria: "Benefits section" },
+  // { label: "Benefits", href: "benefits", aria: "Benefits section" },
   { label: "Pricing", href: "pricing", aria: "Pricing section" },
   { label: "Support", href: "support", aria: "Support section" },
 ];
