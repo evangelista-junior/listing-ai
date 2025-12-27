@@ -2,10 +2,10 @@
 
 import { COOKIE_NAMES, getCookie } from "@/src/lib/cookies";
 import UserLayoutClient from "./UserLayoutClient";
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 
 interface PanelLayoutProps {
-  children: ReactElement;
+  children: ReactNode;
 }
 
 export default async function PanelLayout({ children }: PanelLayoutProps) {

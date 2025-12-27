@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { User, Bell, CreditCard, Shield, Globe } from "lucide-react";
 import Link from "next/link";
 
 interface SettingsProps {
-  children: React.ReactElement;
+  children: ReactNode;
 }
 
 export default function SettingsPage({ children }: SettingsProps) {

@@ -3,10 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/src/components/layout/NavBar";
 import { Footer } from "@/src/components/layout/Footer";
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 
 interface RootLayoutProps {
-  children: ReactElement;
+  children: ReactNode;
 }
 
 const inter = Inter({
