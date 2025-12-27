@@ -19,15 +19,17 @@ export function Hero() {
             </div>
 
             <h1 className="mb-6 max-w-2xl lg:max-w-2/3 mx-auto animate-fade-in">
-              Launch Your Product{" "}
+              Launch Faster{" "}
               <span className="bg-linear-to-r from-primary to-auxiliar bg-clip-text text-transparent">
-                10x Faster
+                Sell More
               </span>
             </h1>
 
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6 animate-fade-in stagger-2">
-              Stop wasting hours writing descriptions. Our AI optimizes titles,
-              bullets, and SEO for Amazon, eBay, and Shopify in seconds.
+              Built by resellers, for resellers, Listing Engine leverages
+              advanced AI to automate listing creation, delivering optimized
+              listings in under 30 seconds. Enabling you to grow your business
+              but not your workload.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-15 animate-fade-in stagger-3">

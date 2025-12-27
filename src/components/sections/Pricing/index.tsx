@@ -1,4 +1,7 @@
+import Link from "next/link";
 import { PricingCard } from "./PricingCard";
+import { Button } from "../../ui/Button";
+import { Check } from "lucide-react";
 
 export function Pricing() {
   const plans = [
@@ -55,29 +58,53 @@ export function Pricing() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-15">
           <h2 className="mb-3 animate-fade-in" id="pricing-heading">
-            Simple, Transparent Pricing
+            Simple, transparent pricing, no monthly subscriptions
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto animate-fade-in stagger-1">
-            Choose the plan that fits your business. Start with a 14-day free
-            trial.
+          <p className="text-xl text-transparent bg-linear-to-br from-primary to-secondary hover:to-auxiliar duration-300 bg-clip-text max-w-2xl mx-auto animate-fade-in stagger-1">
+            <Link href="/auth/signup">
+              Sign up today to receive 100 free listing credits
+            </Link>
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {plans.map((plan, index) => (
+        <div className="flex justify-center items-center">
+          {/* {plans.map((plan, index) => (
             <div
               key={plan.name}
               className={`animate-fade-in stagger-€{index + 2}`}
             >
               <PricingCard {...plan} />
             </div>
-          ))}
+          ))} */}
+          <div
+            className={`bg-white p-6 rounded-xl border-2 transition-all duration-300 border-primary shadow-2xl scale-105 relative text-center`}
+            role="article"
+            aria-label={`Free Trial pricing plan`}
+          >
+            <div className="mb-6">
+              <h3 className="mb-1">Free Trial</h3>
+              <p className="text-gray-600 mb-3">100 free credits</p>
+            </div>
+            <Button
+              variant="primary"
+              className="w-full mb-6"
+              aria-label="Start Free Trial"
+            >
+              Start Free Trial
+            </Button>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <Check
+                  className="w-5 h-5 text-secondary mr-3 shrink-0 mt-0.5"
+                  aria-hidden="true"
+                />
+                <span className="text-gray-700">
+                  £0.20 per listing thereafter.
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <p className="text-center text-gray-600 mt-9 animate-fade-in stagger-5">
-          All plans include 14-day free trial. Cancel anytime, no questions
-          asked.
-        </p>
       </div>
     </section>
   );

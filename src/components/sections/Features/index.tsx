@@ -5,21 +5,20 @@ export function Features() {
   const features = [
     {
       icon: <Zap className="w-6 h-6" aria-hidden="true" />,
-      title: "AI-Powered Generation",
+      title: "AI-Powered",
       description:
-        "Advanced AI creates compelling product titles, descriptions, and bullet points optimized for conversions.",
+        "Our advanced AI identifies your product in seconds and intelligently maps item specifics to their corresponding fields.",
     },
     {
       icon: <Shield className="w-6 h-6" aria-hidden="true" />,
-      title: "SEO Optimization",
+      title: "SEO Optimized",
       description:
-        "Automatic keyword research and integration to boost your product rankings on Amazon, eBay, and Shopify.",
+        "Expertly crafted titles and descriptions, fully eBay-optimized for maximum search visibility and conversion.",
     },
     {
       icon: <Rocket className="w-6 h-6" aria-hidden="true" />,
-      title: "Multi-Platform Support",
-      description:
-        "Create listings for Amazon, eBay, Shopify, Etsy, and Walmart with platform-specific optimization.",
+      title: "Lighning Fast",
+      description: "Create multiple listings simultaneously, done in seconds.",
     },
   ];
 

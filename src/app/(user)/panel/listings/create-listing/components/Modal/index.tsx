@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, Check, AlertCircle } from "lucide-react";
+import { X, Check, AlertCircle, File } from "lucide-react";
 import { Button } from "@/src/components/ui/Button";
 
 interface DraftListing {
@@ -186,17 +186,6 @@ export default function Modal({
                 </div>
               </div>
 
-              <div>
-                <label className="block text-sm font-medium text-black mb-2">
-                  Item Condition
-                </label>
-                <input
-                  type="text"
-                  value={ai.itemCondition}
-                  className="w-full px-3 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-700"
-                />
-              </div>
-
               {/* Item Title */}
               <div>
                 <label className="block text-sm font-medium text-black mb-2">
@@ -221,6 +210,17 @@ export default function Modal({
                   value={ai.itemDescription}
                   rows={6}
                   className="w-full px-3 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 resize-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-black mb-2">
+                  Item Condition
+                </label>
+                <input
+                  type="text"
+                  value={ai.itemCondition}
+                  className="w-full px-3 py-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-700"
                 />
               </div>
 
@@ -477,7 +477,7 @@ export default function Modal({
           </div>
           <div className="flex gap-3">
             <Button variant="outline" onClick={onClose} disabled={isPublishing}>
-              Close
+              Save and Close
             </Button>
             <Button
               variant="success"
@@ -496,6 +496,10 @@ export default function Modal({
                   Publish Listing
                 </>
               )}
+            </Button>
+            <Button variant="primary" onClick={onClose} disabled={isPublishing}>
+              <File className="h-4 w-4" />
+              Publish and Next
             </Button>
           </div>
         </div>

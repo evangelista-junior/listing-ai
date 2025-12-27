@@ -20,21 +20,23 @@ export function About() {
               />
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              We built Listing Engine because creating product listings that
-              actually convert is time-consuming and often frustrating. As
-              former e‑commerce sellers, we spent many hours writing
-              descriptions, researching keywords, and adapting listings for
-              different platforms.
+              Listing Engine was born from the struggle every reseller faces;
+              how to meet their listing goals whilst simultaneously managing
+              their inventory across multiple platforms. Our co-founder James
+              has spent a decade reselling across Ebay, Depop, Shopify and more,
+              building a small company and selling 40,000 items in the process.
+              However, far too much time was wasted learning the title structure
+              for each platform, filling in item specifics boxes and manually
+              managing a 5,000+ item inventory across multiple platforms.
             </p>
             <p className="text-lg text-gray-600 mb-6">
-              Our AI‑assisted platform studies successful listings across
-              Amazon, eBay, Shopify and other marketplaces to generate optimized
-              product descriptions that save time and improve visibility.
-            </p>
-            <p className="text-lg text-gray-600">
-              We’re a new company and like to be realistic: we’ve already helped
-              dozens of sellers simplify their listing creation so they can
-              focus on what matters — growing their business.
+              Listing Engine was built to change that, using multiple complex AI
+              models and our own in house training system our software creates
+              the perfect listing in seconds, with an optimised title, succinct
+              description and correctly mapped item specifics. Allowing our
+              users to spend more time on growing their business, sourcing more
+              items or simply reclaiming some of that work life balance that is
+              so often lost in this industry.
             </p>
           </div>
 

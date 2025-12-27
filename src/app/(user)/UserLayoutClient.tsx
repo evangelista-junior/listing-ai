@@ -19,12 +19,12 @@ interface UserLayoutProps {
 
 const navigation = [
   { name: "Dashboard", href: "/panel/dashboard", icon: LayoutDashboard },
-  { name: "Listings", href: "/panel/listings", icon: TableOfContents },
   {
     name: "Create Listing",
     href: "/panel/listings/create-listing",
     icon: FileText,
   },
+  { name: "Listings", href: "/panel/listings", icon: TableOfContents },
   { name: "Settings", href: "/panel/settings", icon: Settings },
 ];
 

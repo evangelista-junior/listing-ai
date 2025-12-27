@@ -9,6 +9,7 @@ import {
   File,
   FileText,
   Trash,
+  Save,
 } from "lucide-react";
 import Image from "next/image";
 import staticImage from "@/public/levis29w4.jpg";
@@ -354,20 +355,25 @@ export default function CreateListingPage() {
                   >
                     Platform *
                   </label>
-                  <select
-                    id="platform"
-                    value={selectedPlatform}
-                    onChange={(e) => setSelectedPlatform(e.target.value)}
-                    className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                    required
-                  >
-                    <option value="">Select platform</option>
-                    <option value="amazon">Amazon</option>
-                    <option value="ebay">eBay</option>
-                    <option value="shopify">Shopify</option>
-                    <option value="etsy">Etsy</option>
-                    <option value="walmart">Walmart</option>
-                  </select>
+                  <div className="flex gap-3">
+                    <select
+                      id="platform"
+                      value={selectedPlatform}
+                      onChange={(e) => setSelectedPlatform(e.target.value)}
+                      className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                      required
+                    >
+                      <option value="">Select platform</option>
+                      <option value="amazon">Amazon</option>
+                      <option value="ebay">eBay</option>
+                      <option value="shopify">Shopify</option>
+                      <option value="etsy">Etsy</option>
+                      <option value="walmart">Walmart</option>
+                    </select>
+                    <Button variant="secondary">
+                      <Save className="h-4 w-4" /> Save
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -429,25 +435,31 @@ export default function CreateListingPage() {
                 </div>
 
                 {/* Allow Offers */}
-                <div className="flex items-start gap-3">
-                  <input
-                    type="checkbox"
-                    id="allowOffers"
-                    checked={allowOffers}
-                    onChange={(e) => setAllowOffers(e.target.checked)}
-                    className="w-4 h-4 mt-1 text-primary border-gray-300 rounded focus:ring-primary"
-                  />
-                  <div>
-                    <label
-                      htmlFor="allowOffers"
-                      className="block text-sm font-medium text-black cursor-pointer"
-                    >
-                      Allow Offers
-                    </label>
-                    <p className="text-xs text-gray-500 mt-1">
-                      Let buyers send you price offers on this item
-                    </p>
+                <div className="flex items-start justify-between gap-1">
+                  <div className="flex gap-3">
+                    <input
+                      type="checkbox"
+                      id="allowOffers"
+                      checked={allowOffers}
+                      onChange={(e) => setAllowOffers(e.target.checked)}
+                      className="w-4 h-4 mt-1 text-primary border-gray-300 rounded focus:ring-primary"
+                    />
+                    <div>
+                      <label
+                        htmlFor="allowOffers"
+                        className="block text-sm font-medium text-black cursor-pointer"
+                      >
+                        Allow Offers
+                      </label>
+                      <p className="text-xs text-gray-500 mt-1">
+                        Let buyers send you price offers on this item
+                      </p>
+                    </div>
                   </div>
+
+                  <Button variant="secondary">
+                    <Save className="h-4 w-4" /> Save
+                  </Button>
                 </div>
 
                 {/* Offer Settings (conditional) */}
@@ -497,70 +509,19 @@ export default function CreateListingPage() {
                   </div>
                 )}
 
-                {/* Schedule Start Date and Time */}
-                <div className="flex items-start gap-3">
-                  <input
-                    type="checkbox"
-                    id="scheduleStart"
-                    checked={scheduleStart}
-                    onChange={(e) => setScheduleStart(e.target.checked)}
-                    className="w-4 h-4 mt-1 text-primary border-gray-300 rounded focus:ring-primary"
-                  />
-                  <div className="flex-1">
-                    <label
-                      htmlFor="scheduleStart"
-                      className="block text-sm font-medium text-black cursor-pointer"
-                    >
-                      Schedule Start Date and Time
-                    </label>
-                    <p className="text-xs text-gray-500 mt-1">
-                      Schedule when this listing goes live
-                    </p>
-                  </div>
-                </div>
-
-                {/* Schedule Date/Time (conditional) */}
-                {scheduleStart && (
-                  <div className="grid md:grid-cols-2 gap-6 pl-7">
-                    <div>
-                      <label
-                        htmlFor="scheduleDate"
-                        className="block text-sm font-medium text-black mb-2"
-                      >
-                        Start Date
-                      </label>
-                      <input
-                        type="date"
-                        id="scheduleDate"
-                        className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                      />
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="scheduleTime"
-                        className="block text-sm font-medium text-black mb-2"
-                      >
-                        Start Time
-                      </label>
-                      <input
-                        type="time"
-                        id="scheduleTime"
-                        className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                      />
-                    </div>
-                  </div>
-                )}
-
                 {/* Policies */}
                 <div className="grid md:grid-cols-3 gap-6">
                   <div>
                     <label
                       htmlFor="postagePolicy"
-                      className="block text-sm font-medium text-black mb-2"
+                      className="flex items-center justify-between text-sm font-medium text-black mb-2"
                     >
                       Postage Policy
+                      <Button variant="secondary">
+                        <Save className="h-4 w-4" /> Save
+                      </Button>
                     </label>
+
                     <select
                       id="postagePolicy"
                       className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
@@ -576,9 +537,12 @@ export default function CreateListingPage() {
                   <div>
                     <label
                       htmlFor="paymentPolicy"
-                      className="block text-sm font-medium text-black mb-2"
+                      className="flex items-center justify-between text-sm font-medium text-black mb-2"
                     >
                       Payment Policy
+                      <Button variant="secondary">
+                        <Save className="h-4 w-4" /> Save
+                      </Button>
                     </label>
                     <select
                       id="paymentPolicy"
@@ -595,9 +559,12 @@ export default function CreateListingPage() {
                   <div>
                     <label
                       htmlFor="returnsPolicy"
-                      className="block text-sm font-medium text-black mb-2"
+                      className="flex items-center justify-between text-sm font-medium text-black mb-2"
                     >
                       Returns Policy
+                      <Button variant="secondary">
+                        <Save className="h-4 w-4" /> Save
+                      </Button>
                     </label>
                     <select
                       id="returnsPolicy"

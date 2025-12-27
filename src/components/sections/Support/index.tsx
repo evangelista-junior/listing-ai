@@ -1,22 +1,16 @@
 import {
   MessageCircle,
   Mail,
-  FileText,
   Clock,
   Headphones,
   Shield,
+  Calendar,
 } from "lucide-react";
 import { Button } from "../../ui/Button";
+import Link from "next/link";
 
 export function Support() {
   const supportChannels = [
-    {
-      icon: MessageCircle,
-      title: "Live Chat",
-      description: "Get instant answers from our support team",
-      availability: "Available 24/7",
-      color: "from-blue-500 to-cyan-500",
-    },
     {
       icon: Mail,
       title: "Email Support",
@@ -25,10 +19,17 @@ export function Support() {
       color: "from-purple-500 to-pink-500",
     },
     {
-      icon: FileText,
-      title: "Documentation",
-      description: "Comprehensive guides and tutorials",
-      availability: "Self-service anytime",
+      icon: MessageCircle,
+      title: "Live Chat",
+      description: "Get instant answers from our support team",
+      availability: "Available 24/7",
+      color: "from-blue-500 to-cyan-500",
+    },
+    {
+      icon: Calendar,
+      title: "Book a Demo",
+      description: "Schedule a personalized walkthrough with our team",
+      availability: "By appointment",
       color: "from-green-500 to-emerald-500",
     },
   ];
@@ -128,8 +129,9 @@ export function Support() {
             questions.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button variant="secondary">Contact Support</Button>
-            <Button variant="white">View Documentation</Button>
+            <Link href="/support/book-demo">
+              <Button variant="white">Book a Demo</Button>
+            </Link>
           </div>
         </div>
       </div>

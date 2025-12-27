@@ -12,9 +12,9 @@ export default function Home() {
       <main className="flex min-h-screen w-full flex-col items-center justify-between sm:items-start">
         <Hero />
         <About />
-        <Product />
+        {/* <Product /> */}
         <Features />
-        <Benefits />
+        {/* <Benefits /> */}
         <Pricing />
         <Support />
       </main>
