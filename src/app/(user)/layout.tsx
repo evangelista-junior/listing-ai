@@ -10,6 +10,11 @@ interface PanelLayoutProps {
 
 export default async function PanelLayout({ children }: PanelLayoutProps) {
   const token = await getCookie(COOKIE_NAMES.accessToken);
+  const userInfo = await getCookie(COOKIE_NAMES.userInfo);
 
-  return <UserLayoutClient accessToken={token}>{children}</UserLayoutClient>;
+  return (
+    <UserLayoutClient userInfo={userInfo} token={token}>
+      {children}
+    </UserLayoutClient>
+  );
 }

@@ -261,12 +261,10 @@ export default function CreateListingPage() {
 
   const handlePublish = (listingId: number) => {
     console.log("Publishing listing:", listingId);
-    // Here you would implement the actual publish logic
   };
 
   const handleDelete = (listingId: number) => {
     console.log("Publishing listing:", listingId);
-    // Here you would implement the actual publish logic
   };
 
   return (

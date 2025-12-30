@@ -4,6 +4,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 export const COOKIE_NAMES = {
   accessToken: "access_token",
+  userInfo: "user_info",
 } as const;
 
 type CookieNameType = (typeof COOKIE_NAMES)[keyof typeof COOKIE_NAMES];

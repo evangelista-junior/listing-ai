@@ -1,6 +1,8 @@
 "use client";
 
 import { useAuthStore } from "@/src/store/Auth";
+import { getFirstAndLastName } from "./helper";
+
 import {
   TrendingUp,
   FileText,
@@ -49,7 +51,7 @@ export default function DashboardPage() {
         <p className="text-gray-600">
           Welcome back {/* TODO: Login store get name and surname */}
           <strong className="bg-clip-text text-transparent bg-linear-to-br from-primary to-secondary">
-            {user?.name}
+            {user?.full_name && getFirstAndLastName(user?.full_name)}
           </strong>
           ! Here's what's happening with your listings.
         </p>

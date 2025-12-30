@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import { ReactNode, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import {
@@ -13,8 +13,9 @@ import { usePanelStore } from "@/src/store/Panel";
 import { useAuthStore } from "@/src/store/Auth";
 
 interface UserLayoutProps {
-  children: React.ReactNode;
-  accessToken?: string;
+  children: ReactNode;
+  userInfo?: string;
+  token?: string;
 }
 
 const navigation = [
@@ -30,7 +31,8 @@ const navigation = [
 
 export default function UserLayoutClient({
   children,
-  accessToken,
+  userInfo,
+  token,
 }: UserLayoutProps) {
   const location = usePathname();
   const router = useRouter();
@@ -38,18 +40,23 @@ export default function UserLayoutClient({
   const { isSideMenuOpen, toggleSideMenu } = usePanelStore();
   const { isAuthenticated, setUser } = useAuthStore();
 
+  const isPanelPath = location.startsWith("/panel");
+  const isAuthPath = location.startsWith("/auth");
+
   useEffect(() => {
-    if (accessToken) {
-      let token = JSON.parse(accessToken);
-      setUser(token);
-      router.push("/panel/dashboard");
+    if (userInfo && token) {
+      let userInfoJson = JSON.parse(userInfo);
+      setUser(userInfoJson);
+      if (isAuthPath) {
+        router.push("/panel/dashboard");
+      }
       return;
     }
 
-    if (!isAuthenticated) {
+    if (!isAuthenticated && isPanelPath) {
       router.push("/auth/login");
     }
-  }, [accessToken]);
+  }, [userInfo]);
 
   const isActive = (path: string) => location === path;
 

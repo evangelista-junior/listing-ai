@@ -9,7 +9,7 @@ export function getUserInitials(fullname: string) {
 }
 
 export const ProfileFormScheme = z.object({
-  name: z
+  full_name: z
     .string("Full name is required!")
     .refine((fn) => fn.trim().split(/\s+/).length >= 2, {
       error: "Please enter at least your first and last name!",

@@ -1,6 +1,6 @@
-import React from "react";
+import { ReactNode, ButtonHTMLAttributes } from "react";
 
-interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?:
     | "primary"
     | "secondary"
@@ -8,7 +8,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     | "white"
     | "success"
     | "danger";
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export function Button({

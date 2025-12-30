@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState } from "react";
 import { Button } from "@/src/components/ui/Button";
 import { Mail, Lock, User, CheckCircle, AlertCircle } from "lucide-react";
 import Image from "next/image";
@@ -12,6 +11,10 @@ import { SignupFormSchema, SignupFormType } from "@/src/lib/zod/schemas";
 import { Input } from "@/src/components/ui/Input";
 import { Checkbox } from "@/src/components/ui/Checkbox";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { postSignUp } from "@/src/lib/server";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import ErrorCard from "@/src/components/ui/ErrorCard";
 
 export default function SignupPage() {
   const {
@@ -21,16 +24,32 @@ export default function SignupPage() {
   } = useForm<SignupFormType>({
     resolver: zodResolver(SignupFormSchema),
     defaultValues: {
-      fullName: "",
+      full_name: "",
       email: "",
       password: "",
-      confirmPassword: "",
-      acceptTerms: false,
+      confirm_password: "",
+      consent: false,
     },
   });
+  const [error, setError] = useState<string>();
+  const router = useRouter();
 
   const onSubmit: SubmitHandler<SignupFormType> = async (data) => {
-    console.log(data);
+    try {
+      const res = await postSignUp(data);
+
+      if (!res.ok) {
+        throw new Error(res.message);
+      }
+
+      router.push("/auth/signup/success");
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(String(err.message));
+        return;
+      }
+      console.warn(err);
+    }
   };
 
   return (
@@ -53,8 +72,8 @@ export default function SignupPage() {
               type="text"
               placeholder="John Doe"
               icon={User}
-              error={errors.fullName?.message}
-              {...register("fullName")}
+              error={errors.full_name?.message}
+              {...register("full_name")}
             />
             <Input
               label="Email Address"
@@ -77,8 +96,8 @@ export default function SignupPage() {
               type="password"
               placeholder="••••••••"
               icon={Lock}
-              error={errors.confirmPassword?.message}
-              {...register("confirmPassword")}
+              error={errors.confirm_password?.message}
+              {...register("confirm_password")}
             />
             <Checkbox
               label={
@@ -93,8 +112,8 @@ export default function SignupPage() {
                   </Link>
                 </>
               }
-              {...register("acceptTerms")}
-              error={errors.acceptTerms?.message}
+              {...register("consent")}
+              error={errors.consent?.message}
             />
             <Button
               type="submit"
@@ -105,6 +124,8 @@ export default function SignupPage() {
               {isSubmitting ? "Creating Account..." : "Create Account"}
             </Button>
           </form>
+
+          {error && <ErrorCard errorMessage={error} />}
 
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">

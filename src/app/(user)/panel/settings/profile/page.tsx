@@ -25,8 +25,8 @@ export default function Profile() {
   const [userInitials, setUserInitials] = useState<string>();
 
   useEffect(() => {
-    if (user?.name) {
-      const initials = getUserInitials(user?.name);
+    if (user?.full_name) {
+      const initials = getUserInitials(user?.full_name);
       setUserInitials(initials);
     }
   }, [user]);
@@ -54,7 +54,7 @@ export default function Profile() {
         <Input
           type="text"
           label="Full Name"
-          defaultValue={user?.name}
+          defaultValue={user?.full_name}
           error={errors.name?.message}
           {...register("name")}
         />

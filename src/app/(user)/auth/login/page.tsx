@@ -4,16 +4,17 @@ import { Button } from "@/src/components/ui/Button";
 import { Mail, Lock, Home } from "lucide-react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
 import Image from "next/image";
 import transparentLogo from "@/public/transparent_logo.svg";
-import { Login } from "@/src/lib/server";
+import { postLogin } from "@/src/lib/server";
 import { useAuthStore, UserAuthType } from "@/src/store/Auth";
 import Link from "next/link";
 import { LoginFormSchema, LoginFormType } from "@/src/lib/zod/schemas";
 import { Input } from "@/src/components/ui/Input";
 import { Checkbox } from "@/src/components/ui/Checkbox";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import ErrorCard from "@/src/components/ui/ErrorCard";
 
 export default function LoginPage() {
   const {
@@ -23,26 +24,37 @@ export default function LoginPage() {
   } = useForm<LoginFormType>({
     resolver: zodResolver(LoginFormSchema),
     defaultValues: {
-      email: "",
+      username: "",
       password: "",
-      rememberMe: false,
     },
   });
   const router = useRouter();
   const { setUser } = useAuthStore();
+  const [error, setError] = useState<string>();
 
   const onSubmit: SubmitHandler<LoginFormType> = async (data) => {
     try {
+      setError("");
       const res: { ok: boolean; user?: UserAuthType; message?: string } =
-        await Login(data);
+        await postLogin(data);
 
-      if (!res.ok || !res.user) {
-        throw new Error(res.message);
+      if (!res.ok) {
+        throw new Error(String(res.message));
+      }
+
+      if (!res.user) {
+        throw new Error(
+          "Something went wrong trying to get the user information!"
+        );
       }
 
       setUser(res.user);
       router.push("/panel/dashboard");
     } catch (err) {
+      if (err instanceof Error) {
+        setError(String(err.message));
+        return;
+      }
       console.warn(err);
     }
   };
@@ -67,8 +79,8 @@ export default function LoginPage() {
               type="email"
               icon={Mail}
               placeholder="you@example.com"
-              error={errors.email?.message}
-              {...register("email")}
+              error={errors.username?.message}
+              {...register("username")}
             />
             <Input
               label="Password"
@@ -79,18 +91,20 @@ export default function LoginPage() {
               {...register("password")}
             />
 
-            <div className="flex items-center justify-between">
-              <Checkbox label="Remember me" {...register("rememberMe")} />
-
-              <Link href="#" className="text-sm text-primary hover:underline">
-                Forgot password?
-              </Link>
-            </div>
-
             <Button variant="primary" className="w-full" type="submit">
               {isSubmitting ? "Signin in" : "Sign In"}
             </Button>
           </form>
+
+          {error && <ErrorCard errorMessage={error} />}
+
+          <div className="flex items-center justify-between">
+            <Checkbox label="Remember me" />
+
+            <Link href="#" className="text-sm text-primary hover:underline">
+              Forgot password?
+            </Link>
+          </div>
 
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">

@@ -22,6 +22,7 @@ import { Button } from "@/src/components/ui/Button";
 import Image from "next/image";
 import staticImage from "@/public/levis29w4.jpg";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type SortField =
   | "title"
@@ -247,6 +248,8 @@ export default function Listings() {
     createdBy: "",
   });
 
+  const router = useRouter();
+
   // Filter listings
   const filteredListings = React.useMemo(() => {
     return allListings.filter((listing) => {
@@ -335,6 +338,9 @@ export default function Listings() {
 
   const handleBulkAction = (action: string) => {
     console.log(`Performing ${action} on listings:`, selectedListings);
+    if (action == "edit") {
+      router.push("/panel/listings/id1234");
+    }
     // Here you would implement the actual bulk action
     // For now, just clear selection after action
     setSelectedListings([]);

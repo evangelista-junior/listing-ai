@@ -11,18 +11,15 @@ export const BuildingFormSchema = z.object({
 export type BuildingFormType = z.infer<typeof BuildingFormSchema>;
 
 export const LoginFormSchema = z.object({
-  email: z.email("Please provide a valid email!"),
-  password: z
-    .string()
-    .min(1, "Password is required")
-    .min(8, "Password must be at least 8 characters long"),
-  rememberMe: z.boolean(),
+  username: z.email("Please provide a valid email!"),
+  password: z.string().min(1, "Password is required"),
+  // .min(8, "Password must be at least 8 characters long"),
 });
 export type LoginFormType = z.infer<typeof LoginFormSchema>;
 
 export const SignupFormSchema = z
   .object({
-    fullName: z
+    full_name: z
       .string("Full name is required!")
       .refine((fn) => fn.trim().split(/\s+/).length >= 2, {
         error: "Please enter at least your first and last name!",
@@ -32,15 +29,15 @@ export const SignupFormSchema = z
       .string()
       .min(1, "Password is required")
       .min(8, "Password must be at least 8 characters long"),
-    confirmPassword: z
+    confirm_password: z
       .string()
       .min(1, "Confirm password is required")
       .min(8, "Confirm password must be at least 8 characters long"),
-    acceptTerms: z.boolean().refine((at) => at === true, {
+    consent: z.boolean().refine((at) => at === true, {
       error: "Please accpet the terms to register!",
     }),
   })
-  .refine((data) => data.password === data.confirmPassword, {
+  .refine((data) => data.password === data.confirm_password, {
     error: "Passwords do not match",
     path: ["confirmPassword"],
   });

@@ -1,8 +1,7 @@
 import { create } from "zustand";
 
 export type UserAuthType = {
-  // id: string;
-  name: string;
+  full_name: string;
   email: string;
   company?: string;
 };
