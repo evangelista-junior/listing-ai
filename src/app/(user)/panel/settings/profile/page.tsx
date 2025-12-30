@@ -55,8 +55,8 @@ export default function Profile() {
           type="text"
           label="Full Name"
           defaultValue={user?.full_name}
-          error={errors.name?.message}
-          {...register("name")}
+          error={errors.full_name?.message}
+          {...register("full_name")}
         />
 
         <Input
